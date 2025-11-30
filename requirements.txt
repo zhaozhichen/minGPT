@@ -1,0 +1,12 @@
+torch
+numpy
+transformers
+regex
+requests
+jupyter
+
+
+
+
+
+
