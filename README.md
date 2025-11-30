@@ -1,6 +1,14 @@
 
 # minGPT
 
+> **Note (Fork for Education)**:  
+> This is a forked version of Karpathy's [minGPT](https://github.com/karpathy/minGPT).  
+> **Purpose**: To help beginners understand the internal working mechanism of Transformer architecture in depth.  
+> **Key Changes**:
+> - Added extremely detailed **Chinese comments** to core code files (`mingpt/model.py`, `mingpt/trainer.py`, `mingpt/bpe.py`, etc.).
+> - Introduced a **Running Example** (batch_size=1, sequence_length=5, etc.) throughout `model.py` to trace tensor shape changes at every step.
+> - Added **Learning Guides** at the beginning of key files to explain design philosophy.
+
 ![mingpt](mingpt.jpg)
 
 A PyTorch re-implementation of [GPT](https://github.com/openai/gpt-2), both training and inference. minGPT tries to be small, clean, interpretable and educational, as most of the currently available GPT model implementations can a bit sprawling. GPT is not a complicated model and this implementation is appropriately about 300 lines of code (see [mingpt/model.py](mingpt/model.py)). All that's going on is that a sequence of indices feeds into a [Transformer](https://arxiv.org/abs/1706.03762), and a probability distribution over the next index in the sequence comes out. The majority of the complexity is just being clever with batching (both across examples and over sequence length) for efficiency.
@@ -73,7 +81,7 @@ python -m unittest discover tests
 - reproduce some benchmarks in projects/, e.g. text8 or other language modeling
 - proper logging instead of print statement amateur hour haha
 - i probably should have a requirements.txt file...
-- it should be possible to load in many other model weights other than just gpt2-\*
+- it should be possible to load in many other model weights other than just gpt2-*
 
 ### References
 
